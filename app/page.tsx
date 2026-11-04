@@ -38,28 +38,9 @@ export default function Home() {
             </div>
           </div>
           <div className="visual">
-            <div className="mock">
-              <div className="mock-panel">
-                <div className="mock-bar"><span className="dot" /><span className="dot" /><span className="dot" />&nbsp; Bandeja · JUXA Contact</div>
-                <div className="mock-body">
-                  <div className="mock-list">
-                    <div className="mock-item active"><strong>Ana · WhatsApp</strong><small>Quiero cambiar mi cita</small></div>
-                    <div className="mock-item"><strong>Luis · Email</strong><small>Factura de octubre</small></div>
-                    <div className="mock-item"><strong>Sofía · Webchat</strong><small>¿Tienen plan anual?</small></div>
-                    <div className="mock-item"><strong>+52 55 · Llamada</strong><small>En espera · 00:42</small></div>
-                  </div>
-                  <div className="mock-chat">
-                    <div className="msg">Hola, necesito mover mi cita del viernes.</div>
-                    <div className="msg out">Claro, Ana. Tengo jueves 10:30 o lunes 9:00.</div>
-                    <div className="msg">Jueves 10:30 me funciona.</div>
-                    <div className="msg meta">IA · borrador revisado por Sara</div>
-                    <div className="call-card">
-                      <span className="pulse">◉</span>
-                      <div><b>Llamada entrante · +52 55 1234</b><br /><small>Grabación con consentimiento · resumen al cerrar</small></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="art-frame hero-art">
+              <img src="/visuals/hero.svg" alt="" width={1200} height={900} />
+              <div className="art-caption"><span>Bandeja omnicanal</span><span>IA con handoff</span><span>Voz incluida</span></div>
             </div>
           </div>
         </div>
@@ -103,15 +84,22 @@ export default function Home() {
             </div>
           </div>
           <div className="visual">
-            <div className="panel">
-              <div className="mini-title"><b>Cola de atención</b><span>Hoy</span></div>
-              <div className="kpi">
-                <div><span>Abiertas</span><b>128</b></div>
-                <div><span>En SLA</span><b>94%</b></div>
-                <div><span>Bot resueltas</span><b>41%</b></div>
+            <div className="flow-board">
+              <div className="flow-col">
+                <span className="flow-label">Canales</span>
+                {["WhatsApp", "Email", "Webchat", "Voz"].map((x) => <span className="flow-node" key={x}>{x}</span>)}
               </div>
-              <div className="bars">
-                {[38, 52, 44, 70, 62, 86, 58, 74, 90, 66, 48, 78].map((h, i) => <span className="bar" style={{ height: `${h}%` }} key={i} />)}
+              <div className="flow-arrow">→</div>
+              <div className="flow-core">
+                <span className="flow-label">JUXA Contact</span>
+                <b>Una conversación</b>
+                <small>Asignación · SLA · consentimiento</small>
+              </div>
+              <div className="flow-arrow">→</div>
+              <div className="flow-col">
+                <span className="flow-label">Equipo</span>
+                <span className="flow-node">Agente</span>
+                <span className="flow-node">Supervisor</span>
               </div>
             </div>
           </div>
@@ -131,16 +119,9 @@ export default function Home() {
             </div>
           </div>
           <div className="visual">
-            <div className="panel dark">
-              <div className="mini-title" style={{ color: "rgba(244,241,232,.6)" }}><b style={{ color: "var(--paper)" }}>Llamada en curso</b><span>00:42</span></div>
-              <div className="call-card" style={{ background: "rgba(201,255,94,.1)", border: "1px solid rgba(201,255,94,.25)" }}>
-                <span className="pulse">◉</span>
-                <div><b>+52 55 1234 5678</b><br /><small>Entrante · cliente verificado · consentimiento grabado</small></div>
-              </div>
-              <div className="feature-list" style={{ marginTop: 18 }}>
-                <div className="feature" style={{ color: "rgba(244,241,232,.7)" }}><span className="tick">✓</span><div><b style={{ color: "var(--paper)" }}>Transcripción en vivo</b>El agente ve lo que se dijo y puede corregir.</div></div>
-                <div className="feature" style={{ color: "rgba(244,241,232,.7)" }}><span className="tick">✓</span><div><b style={{ color: "var(--paper)" }}>Ticket al cerrar</b>Se crea o actualiza en JUXA ONE con el resumen.</div></div>
-              </div>
+            <div className="art-frame">
+              <img src="/visuals/voice.svg" alt="" width={1000} height={700} />
+              <div className="art-caption"><span>Llamada entrante</span><span>Grabación con consentimiento</span><span>Resumen IA</span></div>
             </div>
           </div>
         </div>
@@ -159,19 +140,9 @@ export default function Home() {
             </div>
           </div>
           <div className="visual">
-            <div className="panel">
-              <div className="mini-title"><b>Campaña · Octubre</b><span>Aprobada</span></div>
-              <div className="kpi">
-                <div><span>Audiencia</span><b>2,480</b></div>
-                <div><span>Entrega</span><b>98.9%</b></div>
-                <div><span>Quejas</span><b>0.02%</b></div>
-              </div>
-              <div className="mini-title" style={{ marginTop: 18 }}><b>Preflight</b><span>4/4</span></div>
-              <div className="feature-list" style={{ marginTop: 8 }}>
-                <div className="feature"><span className="tick">✓</span><div>Consentimiento y supresión verificados</div></div>
-                <div className="feature"><span className="tick">✓</span><div>Dominio y firma listos</div></div>
-                <div className="feature"><span className="tick">✓</span><div>Aprobación humana registrada</div></div>
-              </div>
+            <div className="art-frame">
+              <img src="/visuals/marketing.svg" alt="" width={1000} height={700} />
+              <div className="art-caption"><span>Audiencia</span><span>Consentimiento</span><span>Preflight</span><span>Aprobación</span></div>
             </div>
           </div>
         </div>
