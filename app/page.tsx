@@ -67,8 +67,8 @@ export default function Home() {
 
       <section className="section cream">
         <div className="wrap statement">
-          <div className="big">6</div>
-          <p>formas de hablar con tu cliente.<br /><span>Un solo lugar para responder.</span></p>
+          <div className="big">1</div>
+          <p>bandeja para seis formas de hablar.<br /><span>Un solo lugar para responder.</span></p>
         </div>
       </section>
 
@@ -173,6 +173,17 @@ export default function Home() {
                 <div className="feature"><span className="tick">✓</span><div>Aprobación humana registrada</div></div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap" style={{ textAlign: "center" }}>
+          <p className="kicker">Ecosistema</p>
+          <h2 className="h2" style={{ margin: "0 auto" }}>Construido sobre JUXA OS, vendible por separado.</h2>
+          <p className="sub" style={{ margin: "18px auto 0" }}>La bandeja, la voz y el marketing comparten identidad, tickets y facturación con el OS. Si mañana quieres usarlo solo por API/MCP, también funciona.</p>
+          <div className="eco-strip">
+            {["JUXA ONE", "JUXA Login", "JUXA Docs", "JX-1 IA", "JUXA Billing"].map((x) => <span key={x}>{x}</span>)}
           </div>
         </div>
       </section>

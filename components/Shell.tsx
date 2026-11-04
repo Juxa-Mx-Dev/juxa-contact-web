@@ -6,7 +6,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
       <nav className="nav">
         <div className="nav-in">
           <Link href="/" className="brand" aria-label="JUXA Contact">
-            <span className="brand-mark">JX</span>
+            <img src="/icon.svg" alt="JUXA" className="brand-img" width={30} height={30} />
             <span className="brand-name">JUXA <span>Contact</span></span>
           </Link>
           <div className="nav-links">

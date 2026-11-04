@@ -29,7 +29,7 @@ img{max-width:100%;display:block}
 .nav{position:sticky;top:0;z-index:50;background:rgba(7,16,13,.85);backdrop-filter:blur(14px);border-bottom:1px solid rgba(244,241,232,.09)}
 .nav-in{max-width:1200px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{display:flex;align-items:center;gap:10px;color:var(--paper)}
-.brand-mark{width:30px;height:30px;border-radius:9px;background:var(--lime);display:grid;place-items:center;color:var(--lime-ink);font-weight:800;font-size:15px;font-family:var(--font-display)}
+.brand-img{width:30px;height:30px;border-radius:9px;display:block;box-shadow:0 0 0 1px rgba(244,241,232,.18)}
 .brand-name{font-family:var(--font-display);font-size:21px;letter-spacing:-.03em;font-weight:700}
 .brand-name span{font-family:var(--font-sans);font-weight:500;opacity:.72;margin-left:4px}
 .nav-links{display:flex;align-items:center;gap:26px;font-size:13.5px;color:rgba(244,241,232,.78)}
@@ -136,6 +136,10 @@ img{max-width:100%;display:block}
 .faq details[open] summary span{transform:rotate(45deg)}
 .faq p{padding-bottom:22px;color:var(--muted);font-size:14.5px;line-height:1.7;max-width:720px}
 
+.eco-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 26px;margin-top:30px}
+.eco-strip span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800;color:var(--muted)}
+.eco-strip span::before{content:"·";color:var(--accent);margin-right:10px}
+
 /* final cta + footer */
 .final{background:linear-gradient(140deg,#0d2b21,#07100d 65%);color:var(--paper);border-radius:28px;padding:64px 48px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;margin:64px 0}
 .final h2{font-family:var(--font-display);font-size:clamp(30px,4vw,48px);letter-spacing:-.035em;line-height:1.02;max-width:620px}
@@ -154,6 +158,8 @@ img{max-width:100%;display:block}
   .nav-links{display:none}
 }
 @media(max-width:620px){
+  .nav-cta{display:none}
+  .brand-name span{display:none}
   .hero h1{font-size:42px}.hero-actions .btn{width:100%}
   .final{padding:40px 24px}.final .btn{width:100%}
   .kpi{grid-template-columns:1fr 1fr}
